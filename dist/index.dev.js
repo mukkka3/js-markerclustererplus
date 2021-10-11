@@ -3424,8 +3424,7 @@ var MarkerClusterer = (function () {
       // See Comments 9 & 11 on Issue 3651 relating to this workaround for a Google Maps bug:
 
 
-      var mapBounds;
-      mapBounds = new google.maps.LatLngBounds(this.getMap().getBounds().getSouthWest(), this.getMap().getBounds().getNorthEast());
+      var mapBounds = new google.maps.LatLngBounds(this.getMap().getBounds().getSouthWest(), this.getMap().getBounds().getNorthEast());
       var bounds = this.getExtendedBounds(mapBounds);
       var iLast = Math.min(iFirst + this.batchSize_, this.markers_.length);
 
